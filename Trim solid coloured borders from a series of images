@@ -1,0 +1,8 @@
+magick input.png -trim +repage output.png
+:: This is for a single image
+
+magick input.png -fuzz 6% -trim +repage output.png
+:: The additon of fuzz allows this to work for images that may not be 100% crisp, the higher the % the more it will trim
+
+magick mogrify -fuzz 6% -trim +repage *.png
+:: This will trim all images within a folder, it will replace the images to be careful to do this with a copy of the images in case of any issues.
