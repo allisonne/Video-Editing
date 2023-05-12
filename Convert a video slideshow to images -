@@ -1,0 +1,4 @@
+ffmpeg -i filename.extension -r 0.5 output_%04d.png
+:: filename.extension is the input video slideshow
+:: The number after -r indicates the number of images to create per second, 0.5 means one every 2 seconds, 4 would mean 4 every second
+:: The images filenames will look like output_0000.png; output_0001.png, etc.
